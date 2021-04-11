@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>...</title>
+
+  <style>
+
+p {
+  font-size: 18pt;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex; /* horizontal layout nav */
+  justify-content: space-between;
+  padding: 0;
+  font-size: 20px;
+  margin: 0;
+}
+
+nav > ul > li{
+  padding: 10px;
+}
+
+nav > ul > li:hover{
+  background-color: gray;
+}
+
+#menu-button{
+  display: none;
+}
+
+
+
+nav{
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  
+}
+
+@media(max-width: 600px){
+  #menu-button{
+    padding: 10px;
+
+    display: block;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /**makes nav fixed **/
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    box-shadow: 0 -15px 10px 20px gray;
+  }
+
+  main{
+    padding-top: 60px;
+  }
+
+  h1{
+    padding: 10px;
+
+    color: white;
+  }
+  nav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+  nav.open{
+    display: block;
+  }
+
+  nav > ul{
+    flex-direction: column; /** Already a flex box so just change direction **/
+  }
+
+  nav > ul > li{
+    border-top: 1px solid white;
+  }
+  nav > ul > li:active, .active{
+    background-color: rebeccapurple;
+    }
+}
+
+  </style>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+
+  <header>
+    <h1>Sanco, Inc.</h1>
+
+    <div id="menu-button">
+      <svg viewBox="0 0 100 80" width="30" height="30">
+        <rect fill="white" width="100" height="15"></rect>
+        <rect fill="white" y="30" width="100" height="15"></rect>
+        <rect fill="white" y="60" width="100" height="15"></rect>
+      </svg>
+    </div>
+
+    <nav id="navigation">
+      <ul>
+        <li>Alpha</li>
+        <li>Beta</li>
+        <li>Gamma</li>
+        <li>Alpha</li>
+        <li>Beta</li>
+        <li>Gamma</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur tempore, obcaecati repellat recusandae nobis, itaque minima perspiciatis dignissimos voluptas quo accusantium impedit perferendis saepe consequuntur, dolor explicabo. Inventore voluptas magni, enim sed vel quo consectetur labore veniam dolores similique. Asperiores, accusantium! Quae vitae, earum atque autem excepturi minus reprehenderit.</p>
+    <p>Voluptatum doloribus consequuntur unde autem veniam nesciunt quos obcaecati quae ratione in, aut quasi possimus consectetur, ipsa minus dolor modi magnam cumque explicabo velit, placeat quo. Dolor atque modi aspernatur quaerat, velit ex accusamus a voluptatem optio, repudiandae doloribus dolorum similique sequi itaque expedita laborum beatae quasi voluptates distinctio esse?</p>
+    <p>Illo saepe, repellat distinctio nisi quae culpa quod facilis quidem quis debitis quisquam beatae nostrum quia mollitia ipsa magni nihil modi vitae accusamus. Dolore animi nisi accusantium magni! Neque itaque atque, omnis dolore nam animi, asperiores, nemo in dignissimos repellendus nulla beatae necessitatibus a quibusdam non quisquam nostrum ipsa aliquid!</p>
+    <p>Voluptatibus quibusdam debitis provident doloremque, cupiditate nostrum atque, laborum consequuntur est facere reiciendis hic aspernatur quidem laboriosam et soluta asperiores odio, tenetur blanditiis? Praesentium aliquam adipisci expedita ut? Enim ipsam quam veritatis, ut at odit commodi id repellendus culpa inventore obcaecati reprehenderit, fugit iste laboriosam quos! Quam odio in nobis?</p>
+    <p>Quisquam cum eveniet dolorem, perferendis culpa reprehenderit eligendi et nam porro veritatis neque repellendus. Iure sunt veritatis, impedit ipsa tenetur recusandae, soluta reiciendis illo harum dolor dolores sint, labore nesciunt ipsum error quisquam iste libero dolorem. Nemo nobis aliquid voluptate, recusandae error deleniti voluptas minima quibusdam accusantium? Fuga, quos dolorem!</p>
+    <p>Fugit, debitis minus. Modi ut, iusto deserunt recusandae ullam quibusdam reprehenderit fugit totam repellendus enim perferendis animi optio dolorem laborum eligendi sed, vitae praesentium consequatur pariatur tenetur laudantium? Tempore provident quod molestias quasi. Recusandae id asperiores vel voluptas, dolore, saepe perferendis fugiat harum at, tempora voluptates ad magni debitis sint!</p>
+    <p>Nam repellendus, quae amet nemo vel ab autem aliquam harum dignissimos dolorem eius pariatur perferendis ex perspiciatis! Neque, ipsam culpa! Numquam tempore illum consequuntur perferendis nihil praesentium animi officiis repellat sed doloribus temporibus similique aspernatur non corrupti magni, voluptatem vel quia eveniet veritatis, dolor pariatur ipsum odit molestias culpa? Asperiores.</p>
+    <p>Corporis dolorum, facilis optio quibusdam, quam, tempora distinctio tempore ex voluptatibus rem asperiores ratione voluptates? Possimus sit consequatur in voluptate repudiandae magnam obcaecati animi. Laborum repudiandae inventore, tenetur nam praesentium impedit earum, accusantium expedita molestiae facilis veritatis odio officia ea consequatur aliquam recusandae dolore asperiores voluptatum? Quos eius et placeat.</p>
+    <p>Perferendis, eius eum voluptatibus explicabo dicta aperiam nam possimus quae dolor aut quisquam ut beatae aspernatur eos sint. Corrupti maiores molestiae neque qui quae enim. Ea eos ab debitis aperiam quas? Nobis esse a culpa repudiandae consectetur, quae non. Fugiat ea facere impedit id incidunt enim voluptas ullam distinctio doloribus!</p>
+    <p>Accusamus vitae iusto quidem culpa unde, totam dignissimos perferendis vel! Placeat ratione laborum sunt blanditiis reprehenderit culpa, illo fugit quisquam deserunt. Recusandae, modi quia ducimus repellendus maxime pariatur deserunt neque, ipsa sequi a id. Impedit rem officiis voluptate hic veritatis, voluptatibus voluptatem incidunt eaque eius, deleniti aliquam, totam quod doloremque.</p>
+  </main>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const navigation = document.getElementById('navigation');
+
+    menuButton.addEventListener('click', event => {
+      menuButton.classList.toggle('active');
+      navigation.classList.toggle('open');
+      event.stopPropagation();
+    });
+
+    document.addEventListener('click',  () =>{
+      menuButton.classList.remove('active');
+      navigation.classList.remove('open');
+    });
+
+
+  </script>
+</body>
+</html>

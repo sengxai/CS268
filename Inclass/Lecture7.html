@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    
+    <head>
+        <title></title>
+        
+        <style>
+            /* code pen */
+            html{
+                height: 100%; /* set to 100% since in preview its height
+                                 height is reduced meaning no space left for
+                                 the preview to extend && same with body*/
+            }
+            body{                   
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            } 
+            #editor-root
+            {
+                display: flex;
+                flex-direction: row;
+                flex-basis: 200px;
+            }
+
+            .editor{
+                flex-grow: 1;
+            }
+
+            #preview            /* child */
+            {
+                flex-grow: 1;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="editor-root">
+        <textarea id="html-editor" class="editor"></textarea>
+        <textarea id="css-editor" class="editor"></textarea>
+        
+    </div>
+
+    <iframe id="preview"></iframe>
+    <!--<iframe src="https://google.com"></iframe>--> <!-- this wont work because google says you need
+                                                    to own it.-->
+
+
+    <script>
+        const htmlEditor = document.getElementById('html-editor');
+        const cssEditor = document.getElementById('css-editor');
+        const preview = document.getElementById('preview');
+
+        function updatePreview(){
+            const html =`
+            <html>
+                <head>
+                    <style>
+                        ${cssEditor.value}
+                    </style>
+                </head>
+                <body>
+                    ${htmlEditor.value}
+                </body>
+            </html>
+            `;        /** back ticks string interpolation **/
+            
+            preview.srcdoc = html;
+        }
+
+        htmlEditor.addEventListener('input', updatePreview);
+        cssEditor.addEventListener('input', updatePreview);
+
+
+    </script>
+    </body>
+</html>

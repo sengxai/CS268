@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>...</title>
+  <style>
+
+body {
+  font-family: sans-serif;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Add your HTML and JavaScript here. -->
+  <input id="number-input1" type="text">
+    +
+  <input id="number-input2" type="text">
+  =
+<span id="sum"></span>
+
+    <script>
+        const number1 = document.getElementById('number-input1');
+        const number2 = document.getElementById('number-input2');
+        const sum = document.getElementById("sum");
+
+            function updateSum(){
+                if(number2.value.match(/^\d+$/) && number1.value.match(/^\d+$/)) {
+                    sum.innerText = parseInt(number1.value) + parseInt(number2.value);
+                    
+                }
+                else{
+                sum.innerText = "";
+                }
+            }
+            number1.addEventListener("input", updateSum);
+            number2.addEventListener("input", updateSum);
+                
+       /*numberInput1.addEventListener('input', () => 
+        {
+            if(numberInput1.value.match(/^\d{9}$/))
+            {
+                numberInput2.addEventListener('input', () => 
+                {
+                if(numberInput2.value.match(/^\d{9}$/))
+                {
+                    total.text = adding(numberInput1.value, numberInput2.value);
+                }
+                }
+            }
+        }
+        );
+
+        function adding(a, b)
+        {
+            return a + b;
+        }*/
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Blog Entry 1</title>
+        
+    </head>
+
+    <body>
+        <h1>CS268: Web Systems: Blog Entry 1</h1>
+        <p>
+            For my blog entry, I chose to look at navigation bars 
+            from <a href="https://www.w3schools.com/css/css_navbar.asp">w3schools</a>.
+            It is mainly based upon CSS style of how I would like to design the navigation
+            to be veritcal or horizontal style. This site shows different types of CSS navigational bars.
+            By learning how to do navigational bars on my own webpage it would be more easier to navigate
+            through my webpages more easily.
+        </p>
+
+        <p>
+            From this site I was able to learn about the basics of how to make a navigational bar.
+            I've learnt how to keep active color in the CSS stylesheet
+            so I could tell what webpage I am currently on. I've also learnt how to make a basic
+            horizontal and veritcal navigation bar with unorder list &lt;ul&gt; and &lt;li&gt;.
+        </p>
+
+        <h2>Example Code</h2>
+        <pre>
+            &lt;head&gt;
+            &lt;style&gt;
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            li {
+            float: left;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover {
+            background-color: #111;
+            }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;&lt;a class="active" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+        </pre>
+
+        
+    </body>
+</html>
